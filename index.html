@@ -1,1 +1,308 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Adrian C. Prelipcean</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<link rel="stylesheet" href="styles/style.css" media="screen" />
+		<link rel="stylesheet" href="styles/media-queries.css" />
+		<link rel="stylesheet" href="./flex-slider/flexslider.css" type="text/css" media="screen" />
+		<link href="styles/prettyPhoto.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="styles/tipsy.css" rel="stylesheet" type="text/css" media="screen" />
+
+		<link href="styles/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" media="screen" />
+
+		<script type="text/javascript" src="./scripts/jquery-1.7.1.min.js"></script>
+
+		<script type="text/javascript" src="./scripts/jquery-jvectormap-1.2.2.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-jvectormap-world-mill-en.js"></script>
+
+		<script type="text/javascript" src="./flex-slider/jquery.flexslider-min.js"></script>
+		<script src="scripts/jquery.prettyPhoto.js" type="text/javascript"></script>
+		<script src="scripts/jquery.tipsy.js" type="text/javascript"></script>
+		<script src="scripts/jquery.knob.js" type="text/javascript"></script>
+		<script type="text/javascript" src="./scripts/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="./scripts/jquery.smooth-scroll.min.js"></script>
+		<script type="text/javascript" src="./scripts/waypoints.min.js"></script>
+		<script type="text/javascript" src="./scripts/setup.js"></script>
+
+	</head>
+	<body>
+		<div id="wrap">
+			<!-- wrapper -->
+			<div id="sidebar">
+				<!-- the  sidebar -->
+				<!-- logo -->
+				<a href="#" id="logo"> <img src="./images/logo.png" alt="" /></a>
+				<!-- navigation menu -->
+				<ul id="navigation">
+					<li>
+						<a href="#about">About Me</a>
+					</li>
+					<li>
+						<a href="#portfolio">Projects</a>
+					</li>
+					<li>
+						<a href="#industries">Interests</a>
+					</li>
+					<li>
+						<a href="#publications">Publications</a>
+					</li>
+				</ul>
+			</div>
+			<div id="container">
+				<!-- page container -->
+				<div class="page" id="home">
+					<!-- page home -->
+					<div class="page_content">
+						<div class="gf-slider">
+							<!-- slider -->
+							<ul class="slides">
+								<li>
+									<img src="images/Logo Images/earth.jpg" alt="" />
+								</li>
+								<li>
+									<img src="images/Logo Images/KTH2.jpg" alt="" />
+									<p class="flex-caption">
+										KTH Royal Institute of Technology, Stockholm, Sweden
+									</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="space"></div>
+						<div class="clear"></div>
+
+						<div class="page" id="about">
+							<!-- page about -->
+							<h3 class="page_title"> About Me</h3>
+							<div class="page_content">
+								<p>
+									I am a PhD Student at KTH Geoinformatics, a passionate Geo-Geek, and an OpenSource enthusiast, and my research interests include: mobility data mining, web and mobile GIS, machine learning, and application of GIS within transport sciences.
+								</p>
+								<div class="clear"></div>
+							</div>
+						</div>
+
+						<div class="page" id="portfolio">
+							<!-- page portfolio -->
+							<h3 class="page_title"> Projects</h3>
+
+							<div class="page_content">
+								<p>
+									I enjoy solving (research) problems and travelling. These are some of the projects I worked on, together with the countries where I either studied, researched or presented.
+								</p>
+
+								<div id="world-map" style=" height: 400px"></div>
+								<script>
+									var timeData = {
+										"DE" : 90,
+										"RO" : 8300,
+										"SE" : 900,
+										"BE" : 3,
+										"AT" : 3,
+                                        "DK":3,
+                                        "HU":3
+									};
+									$(function() {
+										$('#world-map').vectorMap({
+											map : 'world_mill_en',
+											series : {
+												regions : [{
+													values : timeData,
+													scale : ['#C8EEFF', '#0071A4'],
+													normalizeFunction : 'polynomial'
+												}]
+											},
+											focusOn : {
+												x : 0.5,
+												y : 0.25,
+												scale : 3
+											},
+											onRegionLabelShow : function(e, el, code) {
+
+												if (timeData[code] / 365 <= 1) {
+													el.html(el.html() + ' (' + timeData[code] + ' days)');
+												} else {
+													if (!isNaN(timeData[code] / 365))
+														el.html(el.html() + ' (' + Math.round(timeData[code] / 365) + ' years)');
+												}
+											},
+											markerStyle : {
+												initial : {
+													fill : '#F8E23B',
+													stroke : '#383f47'
+												}
+											},
+											markers : [{
+												latLng : [53.0758, 8.8075],
+												name : 'Universität Bremen, The Cognitive Systems Group'
+											}, {
+												latLng : [59.3294, 18.0686],
+												name : 'KTH, Royal Institute of Technology, Department of Geoinformatics, Received "Master of Science in Geoinformatics", Pursuing a PhD degree'
+											}, {
+												latLng : [44.4325, 26.1039],
+												name : 'Technical University of Civil Engineering Bucharest, Department of Geodesy, Received "Bachelor Degree in Geodesy"'
+											}, {
+												latLng : [47.8425, 25.9192],
+												name : 'Rădăuţi, Hometown'
+											}, {
+												latLng : [51.0500, 3.7333],
+												name : 'Mobile Ghent, 2013, Presented "Mobility Collector: Battery Conscious Mobile Tracking"'
+											}, {
+												latLng : [48.1217, 16.4633],
+												name : 'LBS2014, Presented "A Space Time Alarm"'
+                                            },
+                                                {
+                                                    latLng : [55.6761, 12.5683],
+                                                    name : 'Nordic PostgreSQL Day 2015, Attended'
+                                                }]
+										});
+									});
+								</script>
+
+								<!-- services -->
+								<div class="one_half first">
+									<div class="column_content">
+										<h4> Mobility Collector: a tracking platform</h4>
+										<p>
+											The <b>Mobility Collector</b> is an open-source platform designed specifically for collecting high quality mobility specific data in a battery conscious manner.
+											<br>
+											The project was presented at the <a href="http://cartogis.ugent.be/mobileghent/sessions/mobility-collector-battery-conscious-mobile-tracking"> Mobile Ghent 2013</a> conference.
+										</p>
+										<a rel="prettyPhoto[gallery]" href="images/photos/03.jpg"> <img src="images/photos/03.jpg" class="work gis" alt="" style="margin-top: 10px;
+										margin-right: 10px" /> </a>
+									</div>
+								</div>
+								<div class="one_half last">
+									<div class="column_content">
+										<h4> Comfort Zones Trajectory Mining</h4>
+										<p>
+											Comfort Zones Trajectory Mining is a database system that supports automatic classification and clustering of trajectories using the postGIS extension of postgres. Developed as part of a project assignment for the course Modern Database Systems and Their Applications (KTH).
+										</p>
+										<a rel="prettyPhoto[gallery]" href="images/photos/03.jpg"> <img src="images/photos/03.jpg" class="work gis" alt="" style="margin-top: 10px;
+										margin-right: 10px" /> </a>
+									</div>
+								</div>
+								<div class="space"></div>
+								<div class="one_half first">
+									<div class="column_content">
+										<h4> Location Drops</h4>
+										<p>
+											Location Based Android Application: A location based service for arranging meetings between users combining social networking and navigation. Developed as part of a project assignment for the course Developing Mobile Applications (KTH).
+										</p>
+									</div>
+								</div>
+								<div class="one_half last">
+									<div class="column_content">
+										<h4>Open Science Map</h4>
+										<p>
+											<a href="http://www.opensciencemap.org/">OpenScienceMap</a> provides free and open maps for Android with the fastest and 100% pure vector maps around. It is a platform used to enable researchers to implement their ideas, to cooperate with others, and to share their results with everybody.
+										</p>
+									</div>
+								</div>
+								<div class="space"></div>
+
+								<div class="clear"></div>
+							</div>
+						</div>
+
+						<ul id="works_filter">
+							<li>
+								<a href="#" data-filter="*" class="selected">Show All</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".gis">GIS</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".mobile_development">Android</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".spatial_db">Spatial Database</a>
+							</li>
+						</ul>
+						<div class="clear"></div>
+						<div id="works">
+							<!-- works -->
+							<a rel="prettyPhoto[gallery]" href="images/photos/01.jpg"> <img class="work spatial_db" src="images/photos/01.jpg" alt="" /> </a>
+
+							<a rel="prettyPhoto[gallery]" href="images/photos/03.jpg"> <img class="work gis" src="images/photos/03.jpg" alt="" /> </a>
+
+							<a rel="prettyPhoto[gallery]" href="images/photos/04.jpg"> <img class="work mobile_development" src="images/photos/04.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/05.jpg"> <img class="work mobile_development" src="images/photos/05.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/06.jpg"> <img class="work gis" src="images/photos/06.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/07.jpg"> <img class="work spatial_db" src="images/photos/07.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/08.jpg"> <img class="work mobile_development" src="./images/photos/08.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/09.jpg"> <img class="work spatial_db" src="images/photos/09.jpg" alt="" /> </a><a rel="prettyPhoto[gallery]" href="images/photos/10.jpg"> <img class="work mobile_development" src="images/photos/10.jpg" alt="" /> </a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<div class="page" id="industries">
+					<!-- page industries -->
+					<h3 class="page_title"> My Interests</h3>
+					<div class="page_content">
+						<p>
+							I am interested in several research fields. Out of these, I particularly want to mention: Location Based Services, Spatio-Temporal Awareness, Intelligent Transportation Systems, (Distributed) GIS, Spatial Databases and Contextualization.
+						</p>
+						<div class="clear"></div>
+
+						<h4 class="blue"> Want to get technical?</h4>
+						<p>
+							If you need more info on me, you can download my CV from <a href="files/resume.pdf">here</a>. Also, please don't hesitate to contact me for further information.
+						</p>
+						<blockquote>
+							Experience with real-world data, however, soon convinces one
+							that both stationarity and Gaussianity are fairy tales invented
+							for the amusement of undergraduates.
+							(Thomson 1994) 
+						</blockquote>
+
+					</div>
+				</div>
+
+				<div class="page" id="publications">
+					<h3 class="page_title"> Conference Proceedings</h3>
+					<div class="page_content">
+						<ul class="pub">
+                        <li>A. C. Prelipcean, G. Gidófalvi, and Y. Susilo. 2015. "Comparative framework for activity-travel diary collection systems", in <i>Proceedings of MT-ITS 2015</i>, pages 251-258, DOI: http://dx.doi.org/10.1109/MTITS.2015.7223264.</li>
+                        <li>A. C. Prelipcean, F. Schmid, and T. Shirabe. 2014. "A Space Time Alarm", in <i>Progress in Location-Based Services 2014</i>, Part IV, Springer International Publishing, pages 187-198, Vienna, Austria, DOI: http://dx.doi.org/10.1007/978-3-319-11879-6_13.</li> 
+						<li>A. C. Prelipcean and G. Gidófalvi. 2013. "Mobility Collector: Battery Conscious Mobile Tracking", in <i>Mobile Ghent'13</i>, Ghent, Belgium, DOI: 10.13140/RG.2.1.1756.1764.</li>
+						</ul>
+					</div>
+					
+					<h3 class="page_title"> Journal Publications</h3>
+					<div class="page_content">
+						<ul class="pub">
+						<li>A. C. Prelipcean, G. Gidófalvi, and Y. Susilo. "Measures of transport mode segmentation of trajectories", in <i>the  International Journal of Geographical Information Science</i>, to appear, DOI: 10.1080/13658816.2015.1137297.</li>  
+						<li>A. C. Prelipcean, G. Gidófalvi, and Y. Susilo. "Mobility Collector", in <i>the Journal of Location Based Services</i>, Volume 8, Issue 4, pages 229-255, 2014, DOI: http://dx.doi.org/10.1080/17489725.2014.973917.</li> 
+						</ul>
+					</div>
+					
+				</div>
+				<div class="page" id="contact">
+					<!-- page contact -->
+					<ul class="social_icons">
+						<li>
+							<a href="https://www.facebook.com/adrian.prelipcean.9" id="fb" original-title="Join Me on Facebook"> <img src="images/facebook.png" alt="Facebook" /></a>
+						</li>
+						<li>
+							<a href="#" id="tw" original-title="Follow Me on Twitter"> <img src="images/twitter.png" alt="Twitter" /></a>
+						</li>
+						<li>
+							<a href="http://www.linkedin.com/in/adrianprelipcean" id="ld" original-title="Find me on LinkedIn"> <img src="images/linkedin.png" alt="LinkedIn" /></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer">
+					<p>
+						&copy; 2012 <a href="http://eGrappler.com">eGrappler.com</a>. Some Rights Reserved.
+					</p>
+					<p>
+						Designed With Love by <a href="http://esarfraz.com">Sarfraz Shoukat</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<a class="gotop" href="#top">Top</a>
+	</body>
+</html>
