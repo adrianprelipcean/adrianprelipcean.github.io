@@ -97,15 +97,56 @@
 
 								<div id="world-map" style=" height: 400px"></div>
 								<script>
+								
+								//ToDo Fix Marker displays -> http://jvectormap.com/examples/usa-unemployment/
 									var timeData = {
 										"DE" : 90,
 										"RO" : 8300,
-										"SE" : 900,
+										"SE" : 1200,
 										"BE" : 3,
 										"AT" : 3,
                                         "DK":3,
                                         "HU":3
 									};
+									
+									var markerLocations = [
+									{
+										latLng : [53.0758, 8.8075],
+										events: [{ eventName : 'Universität Bremen, The Cognitive Systems Group'}]
+									},
+									{
+										latLng : [59.3294, 18.0686],
+										events: [{ eventName : '2012-2014: KTH, Royal Institute of Technology, Department of Geoinformatics, Received "Master of Science in Geoinformatics"'},
+										{ eventName : '2014-present: KTH, Royal Institute of Technology, Department of Geoinformatics, Pursuing a PhD degree'}]
+									},
+									{
+										latLng : [44.4325, 26.1039],
+										events: [{ eventName : '2008-2012: Technical University of Civil Engineering Bucharest, Department of Geodesy, Received "Bachelor of Engineering in Geodesy"'},
+										{ eventName : '2008-2012: Technical University of Civil Engineering Bucharest, Department of Teacher Training, Received "Certificate of Education and Teaching"'}]
+									},
+									{
+										latLng : [47.8425, 25.9192],
+										events: [{ eventName : 'Hometown'}]
+									},
+									{
+										latLng : [51.0500, 3.7333],
+										events: [{ eventName : '2013: Mobile Ghent, Presented "Mobility Collector: Battery Conscious Mobile Tracking"'}]
+									},
+									{
+										latLng : [48.1217, 16.4633],
+										events: [{ eventName : '2014: LBS2014, Presented "A Space Time Alarm"'},
+										{ eventName : '2015: Attended PostgreSQL Conference Europe 2015'}]
+									},
+									{
+										latLng : [55.6761, 12.5683],
+										events: [{ eventName : '2015: Attended Nordic PostgreSQL Day 2015'}]
+									},
+									{
+										latLng : [47.4925, 19.0514],
+										events: [{ eventName : '2015: MT-ITS, Presented "Comparative framework for activity-travel diary collection systems"'}]
+									},
+									];
+									
 									$(function() {
 										$('#world-map').vectorMap({
 											map : 'world_mill_en',
@@ -116,11 +157,19 @@
 													normalizeFunction : 'polynomial'
 												}]
 											},
+											markers:markerLocations,
 											focusOn : {
 												x : 0.5,
 												y : 0.25,
 												scale : 3
 											},
+											onMarkerLabelShow: function(event, label, index){ 
+													var htmlForLabels = '';
+													for (var j=0; j<markerLocations[index].events.length-1;j++)
+														htmlForLabels += '<b>'+markerLocations[index].events[j].eventName+'</b><br/>';
+													htmlForLabels +=  '<b>'+markerLocations[index].events[markerLocations[index].events.length-1].eventName+'</b>';
+													label.html(htmlForLabels);  
+										     },
 											onRegionLabelShow : function(e, el, code) {
 
 												if (timeData[code] / 365 <= 1) {
@@ -135,30 +184,7 @@
 													fill : '#F8E23B',
 													stroke : '#383f47'
 												}
-											},
-											markers : [{
-												latLng : [53.0758, 8.8075],
-												name : 'Universität Bremen, The Cognitive Systems Group'
-											}, {
-												latLng : [59.3294, 18.0686],
-												name : 'KTH, Royal Institute of Technology, Department of Geoinformatics, Received "Master of Science in Geoinformatics", Pursuing a PhD degree'
-											}, {
-												latLng : [44.4325, 26.1039],
-												name : 'Technical University of Civil Engineering Bucharest, Department of Geodesy, Received "Bachelor Degree in Geodesy"'
-											}, {
-												latLng : [47.8425, 25.9192],
-												name : 'Rădăuţi, Hometown'
-											}, {
-												latLng : [51.0500, 3.7333],
-												name : 'Mobile Ghent, 2013, Presented "Mobility Collector: Battery Conscious Mobile Tracking"'
-											}, {
-												latLng : [48.1217, 16.4633],
-												name : 'LBS2014, Presented "A Space Time Alarm"'
-                                            },
-                                                {
-                                                    latLng : [55.6761, 12.5683],
-                                                    name : 'Nordic PostgreSQL Day 2015, Attended'
-                                                }]
+											} 
 										});
 									});
 								</script>
