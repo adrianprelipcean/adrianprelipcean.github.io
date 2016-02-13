@@ -52,6 +52,7 @@
 					</li>
 				</ul>
 			</div>
+			
 			<div id="container">
 				<!-- page container -->
 				<div class="page" id="home">
@@ -71,7 +72,7 @@
 								</li>
 							</ul>
 						</div>
-
+			</div>
 						<div class="space"></div>
 						<div class="clear"></div>
 
@@ -80,8 +81,21 @@
 							<h3 class="page_title"> About Me</h3>
 							<div class="page_content">
 								<p>
-									I am a PhD Student at KTH Geoinformatics, a passionate Geo-Geek, and an OpenSource enthusiast, and my research interests include: mobility data mining, web and mobile GIS, machine learning, and application of GIS within transport sciences.
-								</p>
+									I am currently a PhD student at the KTH Royal Institute of Technology specialized in using artificial intelligence and its applications to extract entities that allow us to better understand how people travel.
+									<br> 
+									Parts of my research focus on analyzing the movement of individuals as recorded via different sensors (e.g., WiFi, GSM, GNSS based positioning fused with accelerometer readings) and building algorithms that extract 
+									useful information from raw movement. An example of a direct application of my research is extracting travel modes from trajectories. 
+									Other parts of my research focus on understanding and modelig error and how it propagates in multi-step approaches. 
+									<br>  
+								</p> 
+								
+								<blockquote>
+							Experience with real-world data, however, soon convinces one
+							that both stationarity and Gaussianity are fairy tales invented
+							for the amusement of undergraduates.
+							<footer> — <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&tp=&arnumber=389899&contentType=Conference+Publications&sortType%3Dasc_p_Sequence%26filter%3DAND(p_IS_Number%3A8837)%26rowsPerPage%3D50">Thomson 1994</a></footer>   
+						</blockquote>
+						
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -90,15 +104,11 @@
 							<!-- page portfolio -->
 							<h3 class="page_title"> Projects</h3>
 
-							<div class="page_content">
-								<p>
-									I enjoy solving (research) problems and travelling. These are some of the projects I worked on, together with the countries where I either studied, researched or presented.
-								</p>
-
+							<div class="page_content"> 
+								My work spans both the study of theoretical concepts as well as applications of those concepts, which led to projects as diverse as system design, machine learning, data quality analysis, data storage and data indexing, or location tracking. 
 								<div id="world-map" style=" height: 400px"></div>
-								<script>
 								
-								//ToDo Fix Marker displays -> http://jvectormap.com/examples/usa-unemployment/
+								<script> 
 									var timeData = {
 										"DE" : 90,
 										"RO" : 8300,
@@ -260,7 +270,7 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-				</div>
+				
 
 				<div class="page" id="industries">
 					<!-- page industries -->
@@ -274,13 +284,7 @@
 						<h4 class="blue"> Want to get technical?</h4>
 						<p>
 							If you need more info on me, you can download my CV from <a href="files/resume.pdf">here</a>. Also, please don't hesitate to contact me for further information.
-						</p>
-						<blockquote>
-							Experience with real-world data, however, soon convinces one
-							that both stationarity and Gaussianity are fairy tales invented
-							for the amusement of undergraduates.
-							(Thomson 1994) 
-						</blockquote>
+						</p> 
 
 					</div>
 				</div>
@@ -306,17 +310,19 @@
 				</div>
 				<div class="page" id="contact">
 					<!-- page contact -->
+					 
 					<ul class="social_icons">
-						<li>
-							<a href="https://www.facebook.com/adrian.prelipcean.9" id="fb" original-title="Join Me on Facebook"> <img src="images/facebook.png" alt="Facebook" /></a>
-						</li>
-						<li>
-							<a href="#" id="tw" original-title="Follow Me on Twitter"> <img src="images/twitter.png" alt="Twitter" /></a>
-						</li>
-						<li>
-							<a href="http://www.linkedin.com/in/adrianprelipcean" id="ld" original-title="Find me on LinkedIn"> <img src="images/linkedin.png" alt="LinkedIn" /></a>
-						</li>
-					</ul>
+											<li>
+												<a href="https://www.facebook.com/adrian.prelipcean.9" id="fb" original-title="Join Me on Facebook"> <img src="images/facebook.png" alt="Facebook" /></a>
+											</li>
+											<li>
+												<a href="#" id="tw" original-title="Follow Me on Twitter"> <img src="images/twitter.png" alt="Twitter" /></a>
+											</li>
+											<li>
+												<a href="http://www.linkedin.com/in/adrianprelipcean" id="ld" original-title="Find me on LinkedIn"> <img src="images/linkedin.png" alt="LinkedIn" /></a>
+											</li>
+										</ul>
+					
 				</div>
 
 				<div class="footer">
@@ -331,4 +337,17 @@
 		</div>
 		<a class="gotop" href="#top">Top</a>
 	</body>
+	
+	<script>
+	// google analytics code
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73750711-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </html>
