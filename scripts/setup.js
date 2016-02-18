@@ -26,9 +26,10 @@ $(document).ready(function () {
     //Scroll
     $('div.page').waypoint(function () {
         var id = $(this).attr('id');
-
-        $('ul#navigation a.active').removeClass('active');
-        $('ul#navigation a[href="#' + id + '"]').addClass('active');
+		//console.log(id);
+		if (id!=undefined)
+        {$('ul#navigation a.active').removeClass('active');
+        $('ul#navigation a[href="#' + id + '"]').addClass('active');}
     });
 
     /* fixes */

@@ -66,7 +66,7 @@ display:none;
 	font-style: normal;
 }
 body {
-	background:#195f88;
+	background:#0A0A0A;
 	font-size:14px
 }
 div#wrap {
@@ -78,7 +78,7 @@ div#sidebar {
 	width:220px;
 	height:100%;
 	float:left;
-	background:#2c2c2c;
+	background:#0D4667;
 	border-right:1px solid #2e2f2f;
 	position:fixed
 }
@@ -135,7 +135,7 @@ div#container {
 	left:-5px;
 	position:relative;
 	padding-top:0;
-	background:#619ec2;
+	background:#181818;
 }
 div.page {
 	margin-bottom:5px solid #dbdbdb;
@@ -294,8 +294,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 h4.blue {
 	font-family: 'OstrichSansBlack';
-	color: #0D4667;
-	text-shadow: 1px 1px 0px #84BBDB;
+	color: #FFDF4D;
+	text-shadow: 1px 1px 0px #DB9784;
 	font-size: 28px;
 	margin-top:20px;
 }
@@ -340,8 +340,8 @@ h4.blue {
 }
 .column_content h4 {
 	font-family: 'OstrichSansBlack';
-	color:#0d4667;
-	text-shadow:1px 1px 0px #84bbdb;
+	color:#FF7C1B;
+	text-shadow:1px 1px 0px #FF4D4D;
 	font-size:28px;
 }
 .first {
@@ -403,7 +403,7 @@ blockquote {
 }
 div.page img {
 	padding:5px;
-	border:1px solid #73aaca;
+	/*border:1px solid #73aaca;*/
 	max-width:94%
 }
 a#logo:hover, a.facebook:hover, a.twitter:hover, a.linkedin:hover, a.dribbble:hover, div.image_gallery img:hover {
