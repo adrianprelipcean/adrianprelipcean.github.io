@@ -126,7 +126,7 @@ ul#navigation li a:link, ul#navigation li a:visited {
 }
 ul#navigation li a:hover, ul#navigation li a.active {
 	background:#1b1b1b;
-	color:#FFF;
+	color:#FF7C1B;
 }
 div#container {
 	width:730px;
@@ -149,9 +149,9 @@ div#container h3.page_title {
 	font-family: 'OstrichSansBlack';
 	margin-left:25px;
 	font-size:35px;
-	color:#fff;
+	color:#FF7C1B;
 	border-bottom:1px solid #fff;
-	text-shadow:1px 1px 2px #185477;
+	text-shadow:1px 1px 2px #6A5B35;
 	line-height:2;
 	padding:5px 0 0px 0px
 }
@@ -340,8 +340,8 @@ h4.blue {
 }
 .column_content h4 {
 	font-family: 'OstrichSansBlack';
-	color:#FF7C1B;
-	text-shadow:1px 1px 0px #FF4D4D;
+	color:#5788EA;
+	text-shadow:1px 1px 0px #30559E;
 	font-size:28px;
 }
 .first {
@@ -417,11 +417,12 @@ div.misc a, a:hover {
 }
 div.blogpost a.readmore:hover, ul.pagination a:hover, ul.pagination a.active_page {
 	background:url(./images/bg/50.png);
-	color:#FFF
+	color:#FF7C1B
 }
 ol.comments li.comment a.reply:hover, div.tab ul.tab_menu li:hover, div.tab ul.tab_menu li.active {
 	background:#8f8f8f;
-	color:#FFF
+	color:#FF7C1B
+	
 }
 .knob {
 	color: White !important;
