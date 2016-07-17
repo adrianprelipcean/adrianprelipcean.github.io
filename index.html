@@ -5,6 +5,9 @@
 		<title>Adrian C. Prelipcean</title>
 
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="description" content="Adrian C. Prelipcean's website">
+		<meta name="keywords" content="personal website">
+		<meta name="author" content="Adrian C. Prelipcean">
 
 		<link rel="stylesheet" href="styles/style.css" media="screen" />
 		<link rel="stylesheet" href="styles/media-queries.css" />
@@ -95,11 +98,9 @@
 							<h3 class="page_title"> About Me</h3>
 							<div class="page_content">
 								<p>
-									I am currently a PhD student at the KTH Royal Institute of Technology specialized in using artificial intelligence and its applications to extract entities that allow us to better understand how people travel.
+									I have recently started two new ventures in the industry world: Airmee, a company specialized in large scale logistic solutions, and Badger, a company specialized in artificial intelligence solutions. I am the CTO of Airmee and Badger, and the CEO of Badger.  
 									<br> 
-									Parts of my research focus on analyzing the movement of individuals as recorded via different sensors (e.g., WiFi, GSM, GNSS based positioning fused with accelerometer readings) and building algorithms that extract 
-									useful information from raw movement. An example of a direct application of my research is extracting travel modes from trajectories. 
-									Other parts of my research focus on understanding and modelig error and how it propagates in multi-step approaches. 
+									In parallel, I am also doing a PhD student at KTH, where I mostly focus on understanding how people make decisions when they travel. My approaches are data-driven and rely on different artificial intelligence algorithms to attach / extract travel semantics to / from trajectories and auxiliary datasets. 
 									<br>  
 								</p> 
 								
@@ -136,8 +137,10 @@
 										"BE" : 3,
 										"AT" : 10,
                                         "DK":3,
-                                        "HU":3,
-                                        "FI":3
+                                        "HU":10,
+                                        "FI":3,
+                                        "EE":5,
+                                        "CN":14
 									};
 									
 									var markerLocations = [
@@ -180,6 +183,18 @@
 										latLng : [60.192059, 24.945831],
 										events: [{ eventName : '2016: Attended Nordic PostgreSQL Day 2016'}]
 									},
+									{
+										latLng : [58.3776, 26.7290],
+										events: [{ eventName : '2016: Mobile Tartu, Presented "MEILI: a travel diary collection, annotation and automation system"'}]
+									},
+									{
+										latLng : [30.2741, 120.1551],
+										events: [{ eventName : '2016: Zhejiang University, Presented "Lessons from a trial of MEILI - a smartphone based semi-automatic activity-travel diary collector, in Stockholm city, Sweden"'}]
+									},
+									{
+										latLng : [31.2304, 121.4737],
+										events: [{ eventName : '2016: WCTR 2016, Presented "MEILI: a travel diary collection, annotation and automation system"'}]
+									},
 									];
 									
 									$(function() {
@@ -196,7 +211,7 @@
 											focusOn : {
 												x : 0.5,
 												y : 0.25,
-												scale : 3
+												scale : 1.5
 											},
 											onMarkerLabelShow: function(event, label, index){ 
 													var htmlForLabels = '';
@@ -344,13 +359,9 @@
 				</div>
 
 				<div class="page" id="publications">
-					<h3 class="page_title"> Selected Publications</h3>
+					<h3 class="page_title"> Publications</h3>
 					<div class="page_content">
-						<ul class="pub">
-						<li>A. C. Prelipcean, G. Gidófalvi, and Y. Susilo. 2015. "<b>Measures of transport mode segmentation of trajectories</b>", in <i>the  International Journal of Geographical Information Science</i>, to appear, DOI: <a href="http://www.tandfonline.com/eprint/dsu2hctMITXagmIzYpjy/full">10.1080/13658816.2015.1137297</a>.</li>  
-						<li>A. C. Prelipcean, G. Gidófalvi, and Y. Susilo. 2014. "<b>Mobility Collector</b>", in <i>the Journal of Location Based Services</i>, Volume 8, Issue 4, pages 229-255, 2014, DOI: <a href="http://www.tandfonline.com/eprint/bKWN8RxekqkMZ3VbMJjZ/full">10.1080/17489725.2014.973917</a>.</li>      
-						</ul>
-						
+						 
 						<a href="./publications.html" style="color:#FFDF4D"><h4 class="blue"> Want to see all my publications?</h4></a>
 						<p>
 							If you want to see a full list of my publications and reports, including my ongoing research projects, please go <a href="./publications.html">here</a>.
@@ -371,10 +382,7 @@
 											</li>
 											<li>
 												<a href="http://www.linkedin.com/in/adrianprelipcean" id="ld" original-title="Find me on LinkedIn"> <img src="images/linkedin.png" alt="LinkedIn" /></a>
-											</li>
-											<li>
-												<a href="https://impactstory.org/AdrianC.Prelipcean" original-title="Find me on ImpactStory"><img src="https://impactstory.org/logo/small" height="35" /></a> 
-											</li> 
+											</li> 	 
 										</ul>
 					
 				</div>
