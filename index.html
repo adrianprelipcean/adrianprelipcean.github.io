@@ -45,13 +45,13 @@
 						<a href="#aboutPage">About Me</a>
 					</li>
 					<li>
-						<a href="#portfolio">Projects</a>
+						<a href="projects.html">Projects</a>
 					</li>
 					<li>
 						<a href="#industries">Interests</a>
 					</li>
 					<li>
-						<a href="#publications">Publications</a>
+						<a href="publications.html">Publications</a>
 					</li>
 				</ul>
 			</div>
@@ -82,12 +82,13 @@
 
 						<div class="page" id="lastUpdate">
 							<!-- page about -->
-							<h3 class="page_title"> Latest update</h3>
+							<h3 class="page_title"> Latest updates</h3>
 							<div class="page_content">
 								<p>
-									Slides for "Assuring spatial and temporal data integrity via constraints and triggers in PostgreSQL" presented at the Stockholm PostgreSQL User Group Meetup are available <a href="http://www.slideshare.net/AdrianCPrelipcean/assuring-spatial-and-temporal-data-integrity-via-constraints-and-triggers-in-postgresql"> here  </a>
-									<br />
-									Slides for "Lessons from a trial of MEILI a smartphone based semi-automatic activity-travel diary collector, in Stockholm city, Sweden" presented at WCTR 2016 are available <a href="http://www.slideshare.net/AdrianCPrelipcean/lessons-from-a-trial-of-meili-a-smartphone-based-semiautomatic-activitytravel-diary-collector-in-stockholm-city-sweden"> here  </a> 
+									<ul>
+									<li>Slides for "Assuring spatial and temporal data integrity via constraints and triggers in PostgreSQL" presented at the Stockholm PostgreSQL User Group Meetup are available <a href="http://www.slideshare.net/AdrianCPrelipcean/assuring-spatial-and-temporal-data-integrity-via-constraints-and-triggers-in-postgresql"> here  </a></li>
+									<li>Slides for "Lessons from a trial of MEILI a smartphone based semi-automatic activity-travel diary collector, in Stockholm city, Sweden" presented at WCTR 2016 are available <a href="http://www.slideshare.net/AdrianCPrelipcean/lessons-from-a-trial-of-meili-a-smartphone-based-semiautomatic-activitytravel-diary-collector-in-stockholm-city-sweden"> here  </a></li>
+									</ul> 
 								</p> 
  
 								<div class="clear"></div>
@@ -99,7 +100,8 @@
 							<h3 class="page_title"> About Me</h3>
 							<div class="page_content">
 								<p>
-									I have recently started two new ventures in the industry world: Airmee, a company specialized in large scale logistic solutions, and Badger, a company specialized in artificial intelligence solutions. I am the CTO of Airmee and Badger, and the CEO of Badger.  
+									I have recently started a new venture in the industry world: <a href="http://www.airmee.com">Airmee</a>, a company specialized in large scale logistic solutions. I am the CTO of Airmee and lead the company's research, development and innovation efforts. 
+									<br >I am also the owner of Badger AB, the company that owns the Intellectual Property Rights on the MEILI family and leads the open source development efforts of MEILI.     
 									<br> 
 									In parallel, I am also doing a PhD student at KTH, where I mostly focus on understanding how people make decisions when they travel. My approaches are data-driven and rely on different artificial intelligence algorithms to attach / extract travel semantics to / from trajectories and auxiliary datasets. 
 									<br>  
@@ -132,6 +134,7 @@
 									  ga('send', 'pageview');
   
 									var timeData = {
+										"US" : 10,
 										"DE" : 90,
 										"RO" : 8300,
 										"SE" : 1600,
@@ -144,7 +147,7 @@
                                         "CN":14
 									};
 									
-									var markerLocations = [ 
+									var markerLocations = [  
 									{
 										latLng : [53.0758, 8.8075],
 										events: [{ eventName : '2013: Universität Bremen, The Cognitive Systems Group'}]
@@ -152,7 +155,8 @@
 									{
 										latLng : [59.3294, 18.0686],
 										events: [{ eventName : '2012-2014: KTH, Royal Institute of Technology, Department of Geoinformatics, Received "Master of Science in Geoinformatics"'},
-										{ eventName : '2014-present: KTH, Royal Institute of Technology, Department of Geoinformatics, Pursuing a PhD degree'},
+										{ eventName : '2014-2016: KTH, Royal Institute of Technology, Department of Geoinformatics, Received "Licentiate of Technology in Geoinformatics and Transportation Science"'},
+										{ eventName : '2016-present: KTH, Royal Institute of Technology, Department of Transportation Science, Pursuing a PhD degree'},
 										{ eventName : '2016: Stockholm PostgreSQL User Group, presented "Assuring spatial and temporal data integrity via constraints and triggers in PostgreSQL"'}
 										]
 									},
@@ -202,6 +206,10 @@
 										latLng : [59.4370, 24.7536],
 										events: [{ eventName : '2016: Attended PostgreSQL Conference Europe 2016'}]
 									},
+									{
+										latLng : [38.89511, -77.03637],
+										events: [{ eventName : '2017: Transportation Research Board 96th Annual Meeting, presented "Three Case Studies on the Semiautomation of Activity Travel Diary Generation Using Smartphones"'}]
+									},
 									];
 									
 									$(function() {
@@ -218,7 +226,7 @@
 											focusOn : {
 												x : 0.5,
 												y : 0.25,
-												scale : 1.5
+												scale : 1.0
 											},
 											onMarkerLabelShow: function(event, label, index){ 
 													var htmlForLabels = '';
@@ -353,7 +361,7 @@
 					<h3 class="page_title"> My Interests</h3>
 					<div class="page_content">
 						<p>
-							I am interested in several research fields. Out of these, I particularly want to mention: Location Based Services, Spatio-Temporal Awareness, Intelligent Transportation Systems, (Distributed) GIS, Spatial Databases and Contextualization.
+							I am interested in several research fields. Out of these, I particularly want to mention: Logistics, Intelligent Transportation Systems, Databases, Location Based Services, Spatio-Temporal Awareness, GIS and Contextualization.
 						</p>
 						<div class="clear"></div>
 
